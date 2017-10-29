@@ -66,7 +66,7 @@ if(isset($_POST['name'])){
                 <div id="alert2"></div>
                 <br>
                 <div class="input-group">
-                    <input name="username" class="form-control" type="text" placeholder="Username">
+                    <input name="username" class="form-control" type="text" required="required" placeholder="Username">
                 </div>
                 <div class="input-group">
                     <input id="pass" name="password" class="form-control" type="password" required="required" placeholder="Password">

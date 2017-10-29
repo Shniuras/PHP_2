@@ -46,9 +46,9 @@ if(isset($_POST['username'])){
 </head>
 <body>
 <div class="container">
-    <h1 class="form-signin-heading text-center">Welcome to Dice Game!</h1>
+    <h1 class="form-signin-heading text-center">Welcome to the Dice Game!</h1>
     <form class="form-signin" action="" method="POST">
-        <h3 class="form-signin-heading">Please sign in!</h3>
+
         <label for="inputEmail" class="sr-only">Username</label>
         <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>

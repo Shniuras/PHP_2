@@ -5,6 +5,11 @@ if(isset($_POST['logout'])) {
     $_SESSION = null;
     header("location: login.php");
 }
+session_start();
+
+if(!isset($_SESSION['name'])){
+    header("location:login.php");
+}
 ?>
 <html>
 <head>
@@ -35,16 +40,17 @@ if(isset($_POST['logout'])) {
     </div>
     <div class="row">
         <div class="col">
-            <div id="firstDice"><img class="picture1" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg";></div>
-            <div id="secondDice"><img class="picture2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Dice-2-b.svg/500px-Dice-2-b.svg.png";></div>
-            <div id="thirdDice"><img class="picture3" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Dice-3-b.svg";></div>
-            <div><h3 id="status"></h3></div>
+            <div id="firstDice"></div>
+            <div id="secondDice"></div>
+            <div id="thirdDice"></div>
+            <div><h3 id="result">Your Result:</h3></div>
+            <div><h3 id="win"></h3></div>
         </div>
     </div>
     <div class="row mt-2">
         <div class="col">
-            <button id="startGame" class="btn btn-secondary sm">Start Game</button>
-            <button id="roleDice" class="btn btn-secondary sm">Role the Dice!</button>
+            <button id="startGame" value="startGame" onclick="myFunction()" class="btn btn-secondary sm">Start Game</button>
+            <button id="rollDice" class="btn btn-secondary sm">Role the Dice!</button>
         </div>
     </div>
 </div>
